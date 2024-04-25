@@ -2,7 +2,7 @@
 
 ## Information
 
-![image]
+![image](https://github.com/Jesseite/OpenBreweryDB-ETL-Python/blob/main/images/Diagram.png)
 
 ## Open Brewery DB
 Open Brewery DB is a free and open-source dataset and API that provides public information on breweries.
