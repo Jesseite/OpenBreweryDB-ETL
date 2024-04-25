@@ -3,11 +3,11 @@ import logging
 from create_df_transform import fetch_normalize
 
 #Postgresql connection information
-host ='localhost'
-user ='postgres'
-port = '5432'
-database ='dbspace'
-password ='password'
+host ='<your host>'
+user ='<your username>'
+port = '<your port>'
+database ='<your database>'
+password ='<your password>'
 
 #Create a table with a chosen schema in PostgreSQL
 def create_sql_table(c, connection):
