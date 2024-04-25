@@ -9,7 +9,7 @@ Open Brewery DB is a free and open-source dataset and API that provides public i
 https://www.openbrewerydb.org/
 
 ## Python
-## Steps
+### Steps
 'create_df_transform' -> Fetch data from the Open Brewery DB API. Flatten JSON and transform it into a dataframe so that it can be easily loaded into a SQL table.
 
 'df_to_postgres' -> Load the dataframe into a PostgreSQL table.
