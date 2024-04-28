@@ -1,13 +1,13 @@
 import psycopg2
 import logging
+import os
 from create_df_transform import fetch_normalize
 
-#Postgresql connection information
-host ='<your host>'
-user ='<your username>'
-port = '<your port>'
-database ='<your database>'
-password ='<your password>'
+postgres_host = os.environ.get('postgres_host')
+postgres_database = os.environ.get('postgres_database')
+postgres_user = os.environ.get('postgres_user')
+postgres_password = os.environ.get('postgres_password')
+postgres_port = os.environ.get('postgres_port')
 
 #Create a table with a chosen schema in PostgreSQL
 def create_sql_table(c, connection):
@@ -72,14 +72,11 @@ def insert_sql_table(df, c, connection):
             connection.rollback()
             logging.error('Failed to insert: %s', str(e))
 
-def df_to_postgres_main():
+def df_to_postgres_main(postgres_host, postgres_database, postgres_user, postgres_port, postgres_password):
     #Postgres connection information
     connection = psycopg2.connect(
-    host=host,
-    user=user,
-    port=port,
-    database=database,
-    password=password,)
+    f"postgresql://{postgres_user}:{postgres_password}@{postgres_host}:{postgres_port}/{postgres_database}"
+    )
     c = connection.cursor()
     try:
         #Create the table
@@ -94,4 +91,4 @@ def df_to_postgres_main():
         c.close()
         connection.close()
 
-df_to_postgres_main()
+df_to_postgres_main(postgres_host, postgres_database, postgres_user, postgres_port, postgres_password)
