@@ -10,9 +10,16 @@ https://www.openbrewerydb.org/
 
 ## Python
 ### Steps
-`create_df_transform` -> Fetch data from the Open Brewery DB API. Flatten JSON and transform it into a dataframe so that it can be easily loaded into a SQL table.
+`openbrewETL` -> Fetch data from the Open Brewery DB API. Flatten JSON and transform it into a dataframe so that it can be easily loaded into a SQL table.
 
-`df_to_postgres` -> Load the dataframe into a PostgreSQL table.
+`fetchBreweryDB_standalone` -> The standalone file that fetches data from Open Brewery API.
+
+## Airflow
+`breweryDAG` -> The DAG file
+
+## Docker
+`Dockerfile`
+`Compose.yml`
 
 ## PostgreSQL
 This is a local PostgreSQL server. I recommend downloading PgAdmin whcih is a GUI for PostgreSQL.
