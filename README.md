@@ -6,6 +6,7 @@
 
 ## Open Brewery DB
 Open Brewery DB is a free and open-source dataset and API that provides public information on breweries.
+
 https://www.openbrewerydb.org/
 
 ## Python
@@ -19,6 +20,7 @@ https://www.openbrewerydb.org/
 
 ## Docker
 `Dockerfile`
+
 `Compose.yml`
 
 ## PostgreSQL
